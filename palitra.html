@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Цветовая палитра</title>
+  <style>
+    .color-cell {
+      width: 500px;
+      height: 50px;
+      display: inline-block;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .red {
+        background-color: #ff0000;
+    }
+    .green {
+        background-color: #00ff00;
+    }   
+    .blue {
+        background-color: #0000ff;
+    }   
+    .yellow {
+        background-color: #ffff00;
+    }   
+    
+    .violet {
+        background-color: #4815d480;
+    }
+     
+    .pink {
+        background-color: #e00c4c1a;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Цветовая палитра</h1>
+  <p>
+    Родился 2 (14) августа 1875 года в Новгороде. Сын генерал-лейтенанта Валериана Петровича Добужинского. Родом из
+    старинной литовской семьи. После рождения сына родители разошлись, когда мать, артистка, певица ушла из семьи.
+    Генерал был не чужд искусству, любил театр и музыку, посещал выставки и сам периодически рисовал[5]. Отец забрал
+    сына на воспитание, который всё своё детство делил между любящими его родителями, поочерёдно проживая то у
+    одного, то у другого. Ребёнком три года жил с отцом в Кишинёве, где поступил во второй класс 2-й городской
+    гимназии[6]. В возрасте 9 лет впервые приехал в Вильну (Вильнюс). В 1889—1895 годах учился в Виленской 2-й
+    гимназии. Затем учился в Санкт-Петербурге в Императорской школе общества поощрения художеств (1885—1887), в
+    школе Антона Ажбе (Мюнхен, 1899—1901) и у Ш. Холлоши (Надьбанья, Венгрия). В 1901 году изучал гравюру под
+    руководством Василия Матэ.
+</p>
+  <div id="color-palette">
+    <div class="color-cell red" data-color="#ff0000">Красный</div>
+    <div class="color-cell green" data-color="#00ff00">Зеленый</div>
+    <div class="color-cell blue" data-color="#0000ff">Синий</div>
+    <div class="color-cell yellow" data-color="#ffff00">Желтый</div>
+    <div class="color-cell violet" data-color="#4815d480;">Фиолетовый</div>
+    <div class="color-cell pink" data-color="#e00c4c1a">Розовый</div>
+  </div>
+  
+  <script>
+    var colorCells = document.querySelectorAll('.color-cell');
+    var body = document.querySelector('body');
+    
+    colorCells.forEach(function(cell) {
+      cell.addEventListener('click', function() {
+        var color = this.getAttribute('data-color');
+        body.style.backgroundColor = color;
+      });
+    });
+  </script>
+</body>
+</html>
